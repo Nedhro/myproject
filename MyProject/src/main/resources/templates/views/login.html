@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<meta charset="UTF-8">
+<link
+	href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/materia/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-SYbiks6VdZNAKT8DNoXQZwXAiuUo5/quw6nMKtFlGO/4WwxW86BSTMtgdzzB9JJl"
+	crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
+<title>Login Page</title>
+</head>
+<body>
+	<h1>Login Here</h1>
+	<form th:action="@{/login}" th:object="${loginform}" method="post">
+	<table class="table table-hover">
+		<tbody>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username" id="username" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" id="password" /></td>
+			</tr>
+			<tr>
+				<td><button type="button" class="btn btn-primary">Login</button></td>
+				<td><button type="reset" class="btn btn-secondary">Reset</button></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
